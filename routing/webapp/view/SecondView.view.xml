@@ -1,0 +1,10 @@
+<mvc:View controllerName="mck.demo.routing.controller.SecondView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Text text = "Welcome to Second View" />
+            <Button text="To First View" press="onButtonPress" />
+        </content>
+    </Page>
+</mvc:View>

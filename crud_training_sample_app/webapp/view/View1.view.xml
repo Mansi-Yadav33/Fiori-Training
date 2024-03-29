@@ -1,0 +1,124 @@
+<mvc:View controllerName="crudtrainingsampleapp.controller.View1"
+    xmlns="sap.ui.table"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:u="sap.ui.unified"
+    xmlns:c="sap.ui.core"
+    xmlns:m="sap.m"
+    displayBlock="true">
+   <m:Page
+        id="page"
+        showHeader="true"
+        enableScrolling="true"
+        title="{i18n>title}"
+        class="sapUiContentPadding"
+    >
+        <m:content>
+            <!-- Table to display products -->
+            <Table
+                id="_IDProductsTable1"
+                rows="{/results}"
+                selectionMode="Single"
+                rowSelectionChange="onProductSelectionChange"
+                visibleRowCount="10"
+            >
+                <extension>
+                    <!-- Overflow toolbar with title -->
+                    <m:OverflowToolbar style="Clear">
+                        <m:Title
+                            id="title"
+                            text="Products"
+                        />
+                        <m:ToolbarSpacer />
+                        <m:Button
+                            text="Add"
+                            press="onAddProductPress"
+                            icon="sap-icon://add"
+                        />
+                    </m:OverflowToolbar>
+                </extension>
+                <!-- Columns for product attributes -->
+                <columns>
+                    <Column>
+                        <m:Label text="Product ID" />
+                        <template>
+                            <m:Text text="{ID}" />
+                        </template>
+                    </Column>
+                </columns>
+
+                <columns>
+                    <Column>
+                        <m:Label text="Product Name" />
+                        <template>
+                            <m:Text text="{Name}" />
+                        </template>
+                    </Column>
+                </columns>
+
+                <columns>
+                    <Column>
+                        <m:Label text="Description" />
+                        <template>
+                            <m:Text text="{Description}" />
+                        </template>
+                    </Column>
+                </columns>
+
+                <columns>
+                    <Column>
+                        <m:Label text="ReleaseDate" />
+                        <template>
+                            <m:Text text="{ReleaseDate}" />
+                        </template>
+                    </Column>
+                </columns>
+
+                <columns>
+                    <Column>
+                        <m:Label text="Rating" />
+                        <template>
+                            <m:Input
+                                value="{Rating}"
+                                editable="false"
+                            />
+                        </template>
+                    </Column>
+                </columns>
+
+                 <columns>
+                    <Column>
+                        <m:Label text="Price" />
+                        <template>
+                            <m:Input
+                                value="{Price}"
+                                editable="false"
+                            />
+                        </template>
+                    </Column>
+                </columns>
+
+                <columns>
+                    <Column width="200px">
+                        <m:Label text="Actions" />
+                        <template>
+                            <m:HBox>
+                                <m:Button
+                                    text="Edit"
+                                    press="onEditProductPress"
+                                    icon="sap-icon://edit"
+                                    class="sapUiTinyMarginEnd"
+                                />
+
+                                <m:Button
+                                    text="Delete"
+                                    press="onDeleteProductPress"
+                                    icon="sap-icon://delete"
+                                />
+                            </m:HBox>
+                        </template>
+                    </Column>
+                </columns>
+            </Table>
+        </m:content>
+    </m:Page>
+</mvc:View>

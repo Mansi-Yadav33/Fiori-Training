@@ -1,0 +1,42 @@
+<mvc:View
+    controllerName="onewaybinding.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <Table
+                id="productTable"
+                items="{/Products}"
+            >
+                <columns>
+                    <Column>
+                        <Text
+                            id="productID"
+                            text="Product ID"
+                        />
+                    </Column>
+                    <Column>
+                        <Text text="Product Name" />
+                    </Column>
+                    <Column>
+                        <Text text="Unit Price" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{ProductID}" />
+                            <Text text="{ProductName}" />
+                            <Text text="{UnitPrice}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

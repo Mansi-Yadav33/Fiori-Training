@@ -1,0 +1,48 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    id="editDialogBox"
+>
+    <Dialog
+        id="editDialog1"
+        title="Update Product Details"
+        draggable="true"
+    >
+        <content>
+            <f:SimpleForm>
+                <f:content>
+                    <Label text="Product ID" />
+                    <Input id="IdInput" editable="false" value="" type="Number"  />
+
+                    <Label text="Product Name" />
+                    <Input id="NameInput" editable="true" value="" />
+
+                    <Label text="Description" />
+                    <Input id="DescriptionInput" editable="true" value="" />
+
+
+                    <Label text="ReleaseDate" />
+                    <Input id="ReleaseDateInput" editable="true" value="" />
+
+
+                    <Label text="Rating" />
+                    <Input id="RatingInput" editable="true" value="" />
+
+                    
+                    <Label text="Price" />
+                    <Input id="PriceInput" editable="true" value=""   />
+                </f:content>
+            </f:SimpleForm>
+        </content>
+
+        <beginButton>
+            <Button text="Save" press=".onPressSaveProduct" />
+        </beginButton>
+
+        <endButton>
+            <Button text="Close" press=".onPressCancel" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>
